@@ -120,7 +120,7 @@ export default {
     initWordChart() {
       return bb.generate({
         data: {
-          columns: this.wordRanking.slice(0, 20),
+          columns: this.wordRanking.slice(0, 10),
           type: donut(), // for ESM specify as: pie()
         },
         bindto: this.$refs.wordChart

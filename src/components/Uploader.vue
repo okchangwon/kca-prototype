@@ -19,10 +19,10 @@ export default {
       const file = e.target.files[0];
       const reader = new FileReader();
 
-      if (file.type !== "text/plain" && file.type !== "text/csv") {
-        alert(file.type + " - 잘못된 파일입니다.")
-        return;
-      }
+      // if (file.type !== "text/plain" && file.type !== "text/csv") {
+      //   alert(file.type + " - 잘못된 파일입니다.")
+      //   return;
+      // }
 
       this.isUploading = true;
 
