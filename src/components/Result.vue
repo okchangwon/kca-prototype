@@ -97,7 +97,7 @@ export default {
   },
   created() {
     if (!this.analysisResults.date) {
-      // this.$router.push({path:'/'});
+      this.$router.push({path:'/'});
       return;
     }
   },
