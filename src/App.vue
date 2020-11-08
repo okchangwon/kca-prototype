@@ -1,26 +1,22 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <router-view @load="onLoadFile" />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import WordsParser from './modules/WordsParser';
+import wordStore from './stores/WordStore';
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  methods: {
+    onLoadFile(body) {
+      const parser = new WordsParser(body);
+
+      wordStore.setAnalysisResults(parser.data());
+
+      this.$router.push({path:'result'});
+    }
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
