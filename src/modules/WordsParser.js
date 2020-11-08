@@ -71,6 +71,8 @@ export default class WordsParser {
     const len = words.length;
 
     for(let i=0;i<len;i++) {
+      if(words[i].length === 0) continue;
+
       if(!counts[words[i]]) {
         counts[words[i]] = 1;
       } else {

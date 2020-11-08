@@ -41,7 +41,7 @@
 <script>
 // base css
 import "billboard.js/dist/theme/insight.css";
-import bb, {pie, donut} from "billboard.js"
+import bb, {pie} from "billboard.js"
 
 import wordStore from '../stores/WordStore';
 
@@ -121,7 +121,7 @@ export default {
       return bb.generate({
         data: {
           columns: this.wordRanking.slice(0, 10),
-          type: donut(), // for ESM specify as: pie()
+          type: pie(), // for ESM specify as: pie()
         },
         bindto: this.$refs.wordChart
       });
