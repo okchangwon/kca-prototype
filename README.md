@@ -1,7 +1,7 @@
 # kca-prototype
 
 ## Demo
-https://okchangwon.github.io/kca-prototype/dist/
+https://okchangwon.github.io/kca-prototype/dist/index.html
 
 ## Project setup
 ```
